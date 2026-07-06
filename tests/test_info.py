@@ -196,7 +196,7 @@ def test_sensors_radio_uptime_preserves_positive() -> None:
 
 
 def test_sensors_socket_uptime_device_keys() -> None:
-    """Device payload keys map onto the iterable property names."""
+    """Device payload keys map onto the normalized property names."""
     sensors = Sensors.from_dict({"socket2_uptime": 123, "socket3_uptime": 45})
     assert sensors.socket_uptime2 == 123
     assert sensors.socket_uptime3 == 45
